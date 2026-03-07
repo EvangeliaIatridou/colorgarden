@@ -1,0 +1,23 @@
+m: hello there
+-
+p: hello, do you want to know what these leaves say about your future?
+- 
+m: what??
+-
+p: these leaves, if you see them closely they have so many details that tell you about your future
+-
+p: I know because I am the master of leaves and the future and maybe everything
+-
+p: I want to share this power with you, if you are ready to know what your future holds 
+-
+p: I already can see that you are curious, I am also a mind reader
+-
+m: ..certainly yea I am curious
+-
+p: Good, that means you are ready. 
+-
+p: Maybe I can also teach you later how to read them so you can also try to become godly like me,
+-
+p: but first do you want to pick a leaf?
+-
+m:(choice)
