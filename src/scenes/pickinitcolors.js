@@ -5,11 +5,11 @@ export class pickinitcolors extends Phaser.Scene {
     }
 
     preload() {
-        this.load.spritesheet('colors', 'assets/picksprite.png', {
+        this.load.spritesheet('colors', '../assets/picksprite.png', {
             frameWidth: 1024,
             frameHeight: 1024
         });
-        this.load.image('bg2', 'assets/poseidwneies.jpg');
+        this.load.image('bg2', '../assets/poseidwneies.jpg');
     }
 
     create() {

@@ -5,7 +5,7 @@ export class firstscene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('secondBg', 'assets/plainblack.gif');
+        this.load.image('secondBg', '../assets/plainblack.gif');
     }
 
     create() {
@@ -37,7 +37,7 @@ export class firstscene extends Phaser.Scene {
         });
 
         next.on('pointerdown', () => {
-            this.scene.start('pickinitcolors');   // go back!
+            this.scene.start('pickinitcolors');   // kidscene1
         });
     }
 }

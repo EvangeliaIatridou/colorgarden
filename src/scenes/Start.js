@@ -10,13 +10,13 @@ export class Start extends Phaser.Scene {
     // }).setOrigin(0.5);
 
     preload() {
-        this.load.image('background', 'assets/plainblack.gif');
+        this.load.image('background', '../assets/plainblack.gif');
         //this.load.image('logo', 'assets/phaser.png');
         //this.load.image('shapes','assets/shapes.jpg');
 
         //  The ship sprite is CC0 from https://ansimuz.itch.io - check out his other work!
-        this.load.spritesheet('ship', 'assets/boomerangintro.png', { frameWidth: 1024, frameHeight: 1024 });
-        this.load.image('shapes','assets/shapes.jpg');
+        this.load.spritesheet('flower', '../assets/boomerangintro.png', { frameWidth: 1024, frameHeight: 1024 });
+        //this.load.image('shapes','assets/shapes.jpg');
     }
 
     create() {
@@ -25,7 +25,7 @@ export class Start extends Phaser.Scene {
 
         //const logo = this.add.image(640, 200, 'logo');
 
-        const ship = this.add.sprite(640, 240, 'ship').setDisplaySize(400, 400);
+        const flower = this.add.sprite(640, 240, 'flower').setDisplaySize(400, 400);
 
         //const sh = this.add.image(640,320, 'shapes');
 
@@ -63,18 +63,18 @@ choice2.setInteractive();
 // pick choices
 choice1.on('pointerdown', () => {
     console.log("CHOICE 1 CLICKED");
-    this.scene.start('playground'); //firstscene
+    this.scene.start('firstscene'); //firstscene
     choice1.setStyle({ color: "#f762f7" });
 });
 // have something happen when choice is picked (diff picture/scene/if case/whatever)
         this.anims.create({
             key: 'fly',
-            frames: this.anims.generateFrameNumbers('ship', { start: 0, end: 19 }),
+            frames: this.anims.generateFrameNumbers('flower', { start: 0, end: 19 }),
             frameRate: 3,
             repeat: -1
         });
 
-        ship.play('fly');
+        flower.play('fly');
 
         // this.tweens.add({
         //     targets: logo,

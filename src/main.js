@@ -1,16 +1,11 @@
 import { Start } from './scenes/Start.js';
 import { firstscene } from './scenes/firstscene.js';
 import { kidscene1 } from './scenes/kidscene1.js';
+import { kidscene2 } from './scenes/kidscene2.js';
 import { pickinitcolors } from './scenes/pickinitcolors.js';
 import { playground } from './scenes/playground.js'
 
 
-const picconfig = {
-    type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    scene: [kidscene1]
-};
 
 
 const config = {
@@ -23,7 +18,7 @@ const config = {
     backgroundColor: '#000000',
     pixelArt: false,
     scene: [
-        Start, firstscene,pickinitcolors,kidscene1,playground
+        Start, firstscene,pickinitcolors,kidscene1,playground,kidscene2
     ],
     scale: {
         mode: Phaser.Scale.FIT,
@@ -36,5 +31,5 @@ const config = {
 //     color: '#ffffff'
 // }).setOrigin(0.5);
 
-new Phaser.Game(config,picconfig);
+const game = new Phaser.Game(config);
             

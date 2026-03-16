@@ -8,16 +8,16 @@ export class kidscene1 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('bg', 'assets/blueredkiddo/bed1empty.gif');
-        this.load.image('bg3', 'assets/blueredkiddo/bed1par.gif');
-        this.load.image('bg4', 'assets/blueredkiddo/kitchen1both.gif');
-        this.load.spritesheet('bg5', 'assets/blueredkiddo/roadsprite.png', {
+        this.load.image('bg', '../assets/blueredkiddo/bed1empty.gif');
+        this.load.image('bg3', '../assets/blueredkiddo/bed1par.gif');
+        this.load.image('bg4', '../assets/blueredkiddo/kitchen1both.gif');
+        this.load.spritesheet('bg5', '../assets/blueredkiddo/roadsprite.png', {
             frameWidth: 1024,
             frameHeight: 1024
         });
-        this.load.text('txt1', 'assets/txts/kid/txt1.txt');
-        this.load.text('txt2', 'assets/txts/kid/txt2.txt'); 
-        this.load.text('txt3', 'assets/txts/kid/streetthoughts.txt');
+        this.load.text('txt1', '../assets/txts/kid/txt1.txt');
+        this.load.text('txt2', '../assets/txts/kid/txt2.txt'); 
+        this.load.text('txt3', '../assets/txts/kid/streetthoughts.txt');
     }   
 
     create() {
