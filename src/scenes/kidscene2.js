@@ -7,7 +7,7 @@ export class kidscene2 extends Phaser.Scene {
 
     preload() {
         this.load.image('liv', '../assets/blueredkiddo/liv1both.gif');
-        this.load.text('txt3', '../assets/txts/kid/txt3.txt'); 
+        this.load.text('text', '../assets/txts/kid/txt3.txt'); 
     }   
 
     create() {
@@ -15,7 +15,7 @@ export class kidscene2 extends Phaser.Scene {
 
         bg.setDisplaySize(400, 400);
 
-        this.array = this.loadArr('txt3');
+        this.array = this.loadArr('text');
         this.textIndex = 0;
         this.sccnt = 0;
 
