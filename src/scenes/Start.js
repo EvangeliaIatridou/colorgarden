@@ -22,7 +22,7 @@ export class Start extends Phaser.Scene {
     }
 
     create() {
-        colorgatherer.choices.push("or");//for testing puproses
+        //colorgatherer.choices.push("or");//for testing puproses
         this.background = this.add.tileSprite(640, 360, 1280, 720, 'background');
 
         //const logo = this.add.image(640, 200, 'logo');
