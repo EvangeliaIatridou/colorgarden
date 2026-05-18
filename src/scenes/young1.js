@@ -104,20 +104,20 @@ export class young1 extends Phaser.Scene {
         
         this.c1 = this.add.text(640, 600, "ok ok im awake, lets go get breakfast", {
                 fontSize: '24px',
-                color: '#ffffff'
+                color: '#f762f7'
         }).setOrigin(0.5).setVisible(true).setInteractive();
         this.c2 = this.add.text(640, 650, "ok, it's not like you're giving me much of a choice..", {
                 fontSize: '24px',
-                color: '#ffffff'
+                color: '#f762f7'
         }).setOrigin(0.5).setVisible(true).setInteractive();
         
         this.c3 = this.add.text(640, 600, ".....not really", {
                 fontSize: '24px',
-                color: '#ffffff'
+                color: '#f762f7'
         }).setOrigin(0.5).setVisible(false);
         this.c4 = this.add.text(640, 650, "yes im ready to be king", {
                 fontSize: '24px',
-                color: '#ffffff'
+                color: '#f762f7'
         }).setOrigin(0.5).setVisible(false);
 
         this.dialogueText = this.add.text(640, 600, "", {
@@ -135,7 +135,7 @@ export class young1 extends Phaser.Scene {
             this.c4.destroy();
                     //speech array
             this.showText(this.houseinit, () => {
-                this.scene.start('schoolinit'); //really is for schoolinit or could add an intermid scene for the road or whatever
+                this.scene.start('schoolinit');
             });     
             
         });
