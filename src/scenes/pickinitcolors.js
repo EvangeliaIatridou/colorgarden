@@ -55,7 +55,7 @@ export class pickinitcolors extends Phaser.Scene {
             console.log('first picked');
             this.spinner.destroy();
             this.titletxt.destroy();
-            this.scene.start('playground'); //kidscene1
+            this.scene.start('kidscene1'); //kidscene1
             //this.bg = this.add.image(640,400,'bg2');
             //change scene
 
