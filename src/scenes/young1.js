@@ -92,12 +92,12 @@ export class young1 extends Phaser.Scene {
 
         // this.spinner.setDisplaySize(400, 400);
 
-        this.t1 = this.add.text(640, 100, "b: wake up! It's your first day at your school today you don't wanna be late!", {
+        this.t1 = this.add.text(640, 100, "wake up! It's your first day at your school today you don't wanna be late!", {
                 fontSize: '24px',
                 color: '#3131c6'
         }).setOrigin(0.5).setVisible(true);
 
-        this.t2 = this.add.text(640, 100, "r: so, how do you feel about being so grown now?", {
+        this.t2 = this.add.text(640, 100, "so, how do you feel about being so grown now?", {
                 fontSize: '24px',
                 color: '#c63131'
         }).setOrigin(0.5).setVisible(false);
@@ -119,43 +119,6 @@ export class young1 extends Phaser.Scene {
                 fontSize: '24px',
                 color: '#ffffff'
         }).setOrigin(0.5).setVisible(false);
-
-        // greenZone.on('pointerdown', () => { //add push
-        //     colorgatherer.choices.push("gr");
-        //     this.spinner.play('sping');
-        //     this.t.destroy();
-        //     greenZone.destroy();
-        //     orangeZone.destroy();
-        //     purpleZone.destroy();
-        //     this.showText(this.array2, () => {
-        //         this.spinner.play('spingm1');
-        //         this.gmt = this.add.text(640, 100, 'click on screen as many times as you can! (at least 15 times)', { fontSize: '16px', fill: '#ffffff' }).setOrigin(0.5);
-        //         greenerZone.setInteractive();
-        //     });
-
-        // });
-
-
-        // const graphics = this.add.graphics();
-        // graphics.lineStyle(4, 0x00ff00);
-        // graphics.strokeRect(
-        //     greenerZone.x - greenerZone.width / 2,
-        //     greenerZone.y - greenerZone.height / 2,
-        //     greenerZone.width,
-        //     greenerZone.height
-        // ).setDepth(10);
-        // graphics.strokeRect(
-        //     rightleafZone.x - rightleafZone.width / 2,
-        //     rightleafZone.y - rightleafZone.height / 2,
-        //     rightleafZone.width,
-        //     rightleafZone.height
-        // ).setDepth(10);
-        // graphics.strokeRect(
-        //     thirdoZone.x - thirdoZone.width / 2,
-        //     thirdoZone.y - thirdoZone.height / 2,
-        //     thirdoZone.width,
-        //     thirdoZone.height
-        // );
 
         this.dialogueText = this.add.text(640, 600, "", {
             fontSize: '24px',
@@ -185,7 +148,7 @@ export class young1 extends Phaser.Scene {
             this.c4.destroy();
                     //speech array
             this.showText(this.houseinit, () => {
-                this.scene.start('defaultnone'); //really is for schoolinit or could add an intermid scene for the road or whatever
+                this.scene.start('schoolinit'); //really is for schoolinit or could add an intermid scene for the road or whatever
             });     
             
         });
@@ -209,8 +172,6 @@ export class young1 extends Phaser.Scene {
         });
 
         this.c2.on('pointerdown', () => {
-            //this.ltxt1.destroy();
-            //this.ltxt2.destroy();
             this.c1.destroy();
             this.c2.destroy();
             this.t1.destroy();
@@ -227,32 +188,6 @@ export class young1 extends Phaser.Scene {
             
         });
 
-
-
-        
-        // this.op1.on('pointerdown', () => {
-        //     this.t2.destroy(); //destroy prev text
-        //     this.t3.destroy(); //destroy prev text
-        //     this.op1.destroy();
-        //     this.op2.destroy();
-        //     this.bg = this.add.image(640,320,'bg4').setDisplaySize(400, 400);
-        //     this.sccnt = 2;
-        //     this.showText(this.array2, () => {
-        //         this.sccnt = 2;
-        //         this.op3.setVisible(true).setInteractive();
-        //         this.op4.setVisible(true).setInteractive();
-
-        //     });
-        // });
-        // this.op2.on('pointerdown', () => {
-        //     //this.bg = this.add.image(640,320,'bg5').setDisplaySize(400, 400);
-        //     this.t2.destroy();
-        //     this.t3.setVisible(true);
-        //     // this.showText(this.array3, () => {
-        //     //     this.sccnt = 3;
-
-        //     // });
-        // });
 
     }
 
