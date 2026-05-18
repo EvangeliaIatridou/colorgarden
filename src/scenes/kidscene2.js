@@ -122,7 +122,7 @@ export class kidscene2 extends Phaser.Scene {
         this.op5.on('pointerdown', () => {
 
             this.op5.destroy()
-            //this.scene.start('young1'); //change scene to young whatever you call it idk 
+            this.scene.start('schoolinit'); //change scene to young1 whatever you call it idk 
 
         });
 

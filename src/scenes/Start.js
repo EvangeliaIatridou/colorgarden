@@ -1,3 +1,5 @@
+import { colorgatherer } from './colorgatherer.js';
+
 export class Start extends Phaser.Scene {
 
     constructor() {
@@ -20,7 +22,7 @@ export class Start extends Phaser.Scene {
     }
 
     create() {
-        
+        colorgatherer.choices.push("or");//for testing puproses
         this.background = this.add.tileSprite(640, 360, 1280, 720, 'background');
 
         //const logo = this.add.image(640, 200, 'logo');
@@ -65,6 +67,15 @@ choice1.on('pointerdown', () => {
     console.log("CHOICE 1 CLICKED");
     this.scene.start('firstscene'); //firstscene
     choice1.setStyle({ color: "#f762f7" });
+});
+choice2.on('pointerdown', () => {
+    console.log("CHOICE 2 CLICKED");
+    // colorgatherer.choices.push("red"); //if (colorgatherer.choices.includes("red")) {
+    // if (colorgatherer.choices.includes("red")){
+    //     console.log("HOE");
+    // }
+    this.scene.start('defaultnone'); //firstscene
+    choice2.setStyle({ color: "#ffffff" });
 });
 // have something happen when choice is picked (diff picture/scene/if case/whatever)
         this.anims.create({

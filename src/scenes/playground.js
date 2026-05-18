@@ -1,3 +1,5 @@
+import { colorgatherer } from './colorgatherer.js';
+
 export class playground extends Phaser.Scene {
 
     constructor() {
@@ -289,7 +291,8 @@ export class playground extends Phaser.Scene {
 
         this.gmt = '';
         
-        greenZone.on('pointerdown', () => {
+        greenZone.on('pointerdown', () => { //add push
+            colorgatherer.choices.push("gr");
             this.spinner.play('sping');
             this.t.destroy();
             greenZone.destroy();
@@ -303,7 +306,8 @@ export class playground extends Phaser.Scene {
 
         });
 
-        orangeZone.on('pointerdown', () => {
+        orangeZone.on('pointerdown', () => { //add push
+            colorgatherer.choices.push("or");
             this.spinner.play('spino');
             this.t.destroy();
             greenZone.destroy();
@@ -318,8 +322,8 @@ export class playground extends Phaser.Scene {
             
 
         });
-        purpleZone.on('pointerdown', () => {
-            
+        purpleZone.on('pointerdown', () => { //add push
+            colorgatherer.choices.push("pr");
             this.t.destroy();
             greenZone.destroy();
             orangeZone.destroy();
@@ -355,15 +359,22 @@ export class playground extends Phaser.Scene {
         this.first = 0;
         this.sec = 0;
         this.first = 0;
+        this.txt = '';
         firstoZone.on('pointerdown', () => {
             this.first =1;
             firstoZone.destroy();
-            this.add.text(520, 200, "nope, mine", {
+            this.txt = this.add.text(520, 200, "nope, mine", {
             fontSize: '24px',
             color: '#cd780f'
             }).setOrigin(0.5);
         });
         this.ocl = '';
+        let button = this.add.rectangle(600, 400, 200, 50, 0xf762f7)
+            .on('pointerdown', () => {
+                clickCount++;
+                console.log('cccc:', clickCount);
+            }).setVisible(false).setOrigin(0.5).setDepth(10);
+
         secoZone.on('pointerdown', () => {
             //this.spinner.play('osec');
             this.sec = 1;
@@ -388,7 +399,7 @@ export class playground extends Phaser.Scene {
             
         });
 
-        thirdoZone.on('pointerdown', () => {
+        thirdoZone.on('pointerdown', () => { //clicker
             //this.spinner.play('othird');
             firstoZone.destroy();
             secoZone.destroy();
@@ -411,9 +422,6 @@ export class playground extends Phaser.Scene {
             console.log('aaaaaaa');
             this.r2.setVisible(true).setInteractive();
         });
-
-        
-        
 
         // const graphics = this.add.graphics();
         // graphics.lineStyle(4, 0x00ff00);
@@ -450,6 +458,7 @@ export class playground extends Phaser.Scene {
         this.r.on('pointerdown', () => {
             this.r.destroy()
             this.bg.destroy();
+            this.txt.destroy();
             button.destroy();
             this.ocl.destroy();
             if(clickCount>=10){
@@ -468,7 +477,7 @@ export class playground extends Phaser.Scene {
             }
         });
         this.keep = this.add.text(640, 80, 'not enough! keep trying', { fontSize: '16px', fill: '#88f762' }).setVisible(false);
-        this.r2.on('pointerdown', () => {
+        this.r2.on('pointerdown', () => { //clicker
             //this.spinner.play('othird');
             //while((clickCount2<10)){ // o theos k h psyxh tou
             console.log('???????');
@@ -531,38 +540,8 @@ export class playground extends Phaser.Scene {
             purpleZone.setInteractive(({ useHandCursor: true }));
         });
 
-        
-        // this.op1.on('pointerdown', () => {
-        //     this.t2.destroy(); //destroy prev text
-        //     this.t3.destroy(); //destroy prev text
-        //     this.op1.destroy();
-        //     this.op2.destroy();
-        //     this.bg = this.add.image(640,320,'bg4').setDisplaySize(400, 400);
-        //     this.sccnt = 2;
-        //     this.showText(this.array2, () => {
-        //         this.sccnt = 2;
-        //         this.op3.setVisible(true).setInteractive();
-        //         this.op4.setVisible(true).setInteractive();
-
-        //     });
-        // });
-        // this.op2.on('pointerdown', () => {
-        //     //this.bg = this.add.image(640,320,'bg5').setDisplaySize(400, 400);
-        //     this.t2.destroy();
-        //     this.t3.setVisible(true);
-        //     // this.showText(this.array3, () => {
-        //     //     this.sccnt = 3;
-
-        //     // });
-        // });
 
         
-
-        let button = this.add.rectangle(600, 400, 200, 50, 0xf762f7)
-            .on('pointerdown', () => {
-                clickCount++;
-                console.log('cccc:', clickCount);
-            }).setVisible(false).setOrigin(0.5).setDepth(10);
     }
 
     showText(array, onComplete = null) {
