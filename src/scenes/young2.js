@@ -18,7 +18,7 @@ export class young2 extends Phaser.Scene {
         this.load.image('black', '../assets/plainblack.gif');
         
         this.load.image('gliv1','../assets/blueredyoung/pgreen/liv1both.gif');
-        this.load.image('gliv2','assets/blueredyoung/pgreen/liv1red.gif');
+        this.load.image('gliv2','../assets/blueredyoung/pgreen/liv1red.gif');
         
         this.load.image('lliv1','../assets/blueredyoung/plilac/liv1both.gif');
         this.load.image('lliv2','../assets/blueredyoung/plilac/liv1red.gif');
