@@ -14,7 +14,8 @@ export class young1 extends Phaser.Scene {
     // }
 
     preload() {    
-        
+        this.load.audio('teen', '../assets/music/angstlong2.mp3');
+
         this.load.image('black', '../assets/plainblack.gif');
         
         this.load.image('gbed','../assets/blueredyoung/pgreen/bed1par.gif');
@@ -33,24 +34,9 @@ export class young1 extends Phaser.Scene {
         this.load.image('oliv2','../assets/blueredyoung/porange/liv1red.gif');
 
 
-        // this.load.spritesheet('bg6', '../assets/blueredkiddo/playgroundsprite.png', {
-        //     frameWidth: 1024,
-        //     frameHeight: 1024
-        // }); //
-        
         
         this.load.text('houseinit', '../assets/txts/young/houseinit.txt');
-        
-
-        // this.load.text('g1', '../assets/txts/kid/green.txt'); 
-        // this.load.text('p1', '../assets/txts/kid/purple.txt');
-        // this.load.text('o1', '../assets/txts/kid/orange.txt');
-
-        // this.load.text('g2', '../assets/txts/kid/green2.txt'); 
-        // this.load.text('p2', '../assets/txts/kid/purple2.txt');
-        // this.load.text('o2w', '../assets/txts/kid/orange2.txt');
-        // this.load.text('o2l', '../assets/txts/kid/orange2loss.txt');
-        
+    
          
     }   
 
@@ -63,6 +49,11 @@ export class young1 extends Phaser.Scene {
         //this.add.image(640, 320, 'lbed');
         // let clickCount = 0;
         // let clickCount2 = 0;
+        this.music = this.sound.add('teen', {
+            volume: 1.0,       // Adjust volume (0.0 to 1.0)
+            loop: true         // Set to true to repeat endlessly
+        });
+        this.music.play();
 
         this.houseinit = this.loadArr('houseinit');
 
@@ -97,9 +88,10 @@ export class young1 extends Phaser.Scene {
                 color: '#3131c6'
         }).setOrigin(0.5).setVisible(true);
 
-        this.t2 = this.add.text(640, 100, "so, how do you feel about being so grown now?", {
+        this.t2 = this.add.text(640, 100, "so now that you're going to highschool, do you feel grown now?", {
                 fontSize: '24px',
-                color: '#c63131'
+                color: '#c63131',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
         
         this.c1 = this.add.text(640, 600, "ok ok im awake, lets go get breakfast", {
@@ -108,7 +100,8 @@ export class young1 extends Phaser.Scene {
         }).setOrigin(0.5).setVisible(true).setInteractive();
         this.c2 = this.add.text(640, 650, "ok, it's not like you're giving me much of a choice..", {
                 fontSize: '24px',
-                color: '#f762f7'
+                color: '#f762f7',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(true).setInteractive();
         
         this.c3 = this.add.text(640, 600, ".....not really", {
@@ -217,7 +210,7 @@ export class young1 extends Phaser.Scene {
         this.dialogueText.setText(textContent);
 
 
-        this.dialogueText.setPosition(640, 80); //
+        this.dialogueText.setPosition(640, 80).setDepth(1000); //
         if (speaker == null){
             this.dialogueText.setColor('#ffffff');
         }

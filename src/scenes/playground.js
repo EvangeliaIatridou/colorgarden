@@ -458,7 +458,7 @@ export class playground extends Phaser.Scene {
         this.r.on('pointerdown', () => {
             this.r.destroy()
             this.bg.destroy();
-            this.txt.destroy();
+            this.txt = '';
             button.destroy();
             this.ocl.destroy();
             if(clickCount>=10){

@@ -127,22 +127,26 @@ export class classroom extends Phaser.Scene {
 
         this.t2 = this.add.text(640, 80, "I told you we are really early! Do you think it's a coincidence that we had so many available seats to choose from?", {
                 fontSize: '24px',
-                color: '#deff65'
+                color: '#deff65',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t3 = this.add.text(640, 80, "... Well it's better to be early than late right pink?", {
                 fontSize: '24px',
-                color: '#62d3f7'
+                color: '#62d3f7',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t4 = this.add.text(640, 80, "so you'd rather risk being late? Really? I don't know if that's a good idea there..", {
                 fontSize: '24px',
-                color: '#62d3f7'
+                color: '#62d3f7',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t5 = this.add.text(640, 80, "you know, I think it would be best if we just wait for the teacher in silence", {
                 fontSize: '24px',
-                color: '#deff65'
+                color: '#deff65',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t6 = this.add.text(640, 80, "that's right!! I knew we agreed pink", {
@@ -152,7 +156,8 @@ export class classroom extends Phaser.Scene {
 
         this.t7 = this.add.text(640, 80, "well.. however it is i guess it's nice being here instead of being outside so I can't be mad at that", {
                 fontSize: '24px',
-                color: '#deff65'
+                color: '#deff65',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.cd1 = this.add.text(640, 600, "draw fence", {
@@ -204,17 +209,20 @@ export class classroom extends Phaser.Scene {
 
         this.d3 = this.add.text(640, 80, "good! I thought you weren't paying attention but it looks like you got it so, let's continue..", {
                 fontSize: '24px',
-                color: '#7e59c6'
+                color: '#7e59c6',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.d4 = this.add.text(640, 80, "hmm looks like you have to focus a little more pink, try to do that for the rest of this hour", {
                 fontSize: '24px',
-                color: '#7e59c6'
+                color: '#7e59c6',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.d5 = this.add.text(640, 80, "(ok this is the best drawing ever but let's focus now)", {
                 fontSize: '24px',
-                color: '#deff65'
+                color: '#deff65',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.endtxt = this.add.text(640, 300, "after 2 hours of algebra and a questionable hour of grammar red and blue came to pick you up..", {
@@ -431,7 +439,7 @@ export class classroom extends Phaser.Scene {
                 }else if(colorgatherer.choices.includes("gr")){
                     this.classimg = this.add.image(640, 320, 'treefencebutterflygr').setDisplaySize(400, 400);
                 }else if(colorgatherer.choices.includes("pr")){
-                    this.classimg = this.add.image(640, 320, 'treebutterflyl').setDisplaySize(400, 400);
+                    this.classimg = this.add.image(640, 320, 'treefencebutterflyl').setDisplaySize(400, 400);
                 }
             }else{
                 if (colorgatherer.choices.includes("or")){ //

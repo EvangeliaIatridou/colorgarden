@@ -18,11 +18,17 @@ export class kidscene1 extends Phaser.Scene {
         this.load.text('txt1', '../assets/txts/kid/txt1.txt');
         this.load.text('txt2', '../assets/txts/kid/txt2.txt'); 
         this.load.text('txt3', '../assets/txts/kid/streetthoughts.txt');
+
+        this.load.audio('kid', '../assets/music/kidlong2.mp3');
     }   
 
     create() {
         const bg = this.add.image(640, 320, 'bg');
-
+        this.music = this.sound.add('kid', {
+            volume: 1.0,       // Adjust volume (0.0 to 1.0)
+            loop: true         // Set to true to repeat endlessly
+        });
+        this.music.play();
         bg.setDisplaySize(400, 400);
 
         this.array1 = this.loadArr('txt1');

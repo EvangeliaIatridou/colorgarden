@@ -46,6 +46,11 @@ export class young2 extends Phaser.Scene {
         this.surel = this.loadArr('surel');
         this.integr = this.loadArr('integralsl');
 
+        this.events.on('shutdown', () => {
+            //this.music.stop(); 
+            this.sound.stopAll();
+        });
+
         if (colorgatherer.choices.includes("or")){
             this.housebg = this.add.image(640, 320, 'oliv1').setDisplaySize(400, 400);
         }else if(colorgatherer.choices.includes("gr")){
@@ -72,33 +77,39 @@ export class young2 extends Phaser.Scene {
 
         this.sh1 = this.add.text(640, 100, "yea that's how it usually goes.. you will have to figure out some way to make it fun", {
                 fontSize: '24px',
-                color: '#c63131'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#c63131',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.sh2 = this.add.text(640, 100, "afterall it's only the first day, you can't really know just from this day", {
                 fontSize: '24px',
-                color: '#c63131'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#c63131',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.dinner = this.add.text(640, 100, "we can eat in a little bit if you're hungry, i cooked up some pasta", {
                 fontSize: '24px',
-                color: '#c63131'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#c63131',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.end1 = this.add.text(640, 100, "and about that time thing, it will pass by faster after a while..", {
                 fontSize: '24px',
-                color: '#c63131'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#c63131',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.end2 = this.add.text(640, 100, "and about that time thing, blue is right, it does pass quickly especially when you like what you are doing..", {
                 fontSize: '24px',
-                color: '#c63131'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#c63131',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.end = this.add.text(640, 100, "do feel free to tell us anything, and be careful ok?", {
                 fontSize: '24px',
-                color: '#c63131'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#c63131',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
 
         this.g1 = this.add.text(640, 600, "it felt like ages", {
@@ -144,22 +155,25 @@ export class young2 extends Phaser.Scene {
         this.out = this.add.text(640, 100, "huh I did stuff like this too, but did you like it?", {
                 fontSize: '24px',
                 color: '#f762f7'
-        }).setOrigin(0.5).setVisible(false);
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.like = this.add.text(640, 100, "well then, you don't have to feel too bad just don't make it a habit", {
                 fontSize: '24px',
-                color: '#f762f7'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#f762f7',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.likedislike = this.add.text(640, 100, "don't hang out with people that don't care about what you want or need to do", {
                 fontSize: '24px',
-                color: '#f762f7'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#f762f7',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.dislike = this.add.text(640, 100, "then you shouldn't hang out with them next time I don't like them either now", {
                 fontSize: '24px',
-                color: '#f762f7'
-        }).setOrigin(0.5).setVisible(false);
+                color: '#f762f7',
+                wordWrap: { width: 500 }
+        }).setOrigin(0.5).setVisible(false).setDepth(10);;
 
         this.yes = this.add.text(640, 600, "yes", {
                 fontSize: '24px',
@@ -372,7 +386,7 @@ export class young2 extends Phaser.Scene {
         });
         this.end.on('pointerdown', () => {
             this.end.destroy();
-            this.scene.start('defaultnone'); //change to adult
+            this.scene.start('adult1'); //change to adult
         });
 
     }

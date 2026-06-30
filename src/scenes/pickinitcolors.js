@@ -9,7 +9,6 @@ export class pickinitcolors extends Phaser.Scene {
             frameWidth: 1024,
             frameHeight: 1024
         });
-        this.load.image('bg2', '../assets/poseidwneies.jpg');
     }
 
     create() {

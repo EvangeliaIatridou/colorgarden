@@ -118,17 +118,20 @@ export class schoolinit extends Phaser.Scene {
 
         this.t1 = this.add.text(640, 80, "well, there is always a way, it's not like it's closed forever. You'll just do other things than play around with soil or the swing", {
                 fontSize: '24px',
-                color: '#c63131'
+                color: '#c63131',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t2 = this.add.text(640, 80, "it's.. part of growing up. They grow up so fast!! I cannot believe it you were a little kid like a minute ago.. (literally)", {
                 fontSize: '24px',
-                color: '#3131c6'
+                color: '#3131c6',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t3 = this.add.text(640, 80, "cmon blue, let's let the kid have its own little adventure, we have to get going finally", {
                 fontSize: '24px',
-                color: '#c63131'
+                color: '#c63131',
+                wordWrap: { width: 500 }
         }).setOrigin(0.5).setVisible(false);
 
         this.t4 = this.add.text(640, 80, "alright! Off you go now, we will miss you but have fun!!", {
@@ -220,17 +223,14 @@ export class schoolinit extends Phaser.Scene {
             .setOrigin(0.5);
        
         gangZone.on('pointerdown', () => { //add push
-            colorgatherer.choices.push("fu");
-            colorgatherer.choices.push("dgr");
-            colorgatherer.choices.push("brw");
+            colorgatherer.choices.push("fbg");
             this.pick.destroy();
             this.scene.start('gang'); //gang scene
 
         });
 
         classZone.on('pointerdown', () => { //add push
-            colorgatherer.choices.push("yel");
-            colorgatherer.choices.push("cyan");
+            colorgatherer.choices.push("ycl");
             this.pick.destroy();
             this.scene.start('yellowcyan'); //yellowcyan scene
         });

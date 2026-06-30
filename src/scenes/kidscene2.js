@@ -12,6 +12,10 @@ export class kidscene2 extends Phaser.Scene {
 
     create() {
         const bg = this.add.image(640, 320, 'liv');
+        this.events.on('shutdown', () => {
+            //this.music.stop(); 
+            this.sound.stopAll();
+        });
 
         bg.setDisplaySize(400, 400);
 

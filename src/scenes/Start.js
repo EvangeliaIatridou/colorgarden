@@ -19,10 +19,24 @@ export class Start extends Phaser.Scene {
         //  The ship sprite is CC0 from https://ansimuz.itch.io - check out his other work!
         this.load.spritesheet('flower', '../assets/boomerangintro.png', { frameWidth: 1024, frameHeight: 1024 });
         //this.load.image('shapes','assets/shapes.jpg');
+
+        this.load.audio('kid', '../assets/music/kidlong2.mp3');
     }
 
     create() {
-        //colorgatherer.choices.push("or");//for testing puproses
+        this.music = this.sound.add('kid', {
+            volume: 0.5,       // Adjust volume (0.0 to 1.0)
+            loop: true         // Set to true to repeat endlessly
+        });
+        this.music.play();
+        this.events.on('shutdown', () => {
+            this.music.stop(); 
+            // Alternatively, use: this.sound.stopAll();
+        });
+        // colorgatherer.choices.push("or");//for testing purposes
+        // colorgatherer.choices.push("fbg");//for testing purposes
+        // colorgatherer.choices.push("si");//for testing purposes
+
         this.background = this.add.tileSprite(640, 360, 1280, 720, 'background');
 
         //const logo = this.add.image(640, 200, 'logo');
