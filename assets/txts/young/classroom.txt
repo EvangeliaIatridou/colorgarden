@@ -36,6 +36,6 @@ m: (sure. Thank you)
 -
 y: (ok, I'll draw something and you will add to it)
 -
-y: (I'll try to put cyan into it too) [yes if agreed w them, no if didn't]
+y: (I'll try to put cyan into it too)
 -
 l: ..so when you solve for x since the value of y is 5...
