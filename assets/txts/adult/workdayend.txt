@@ -1,0 +1,13 @@
+i: these last hours sure passed by quickly..
+-
+i: oh here you are! Last chance to join!
+-
+m: I don't think I'll join but thank you for the invitation
+-
+m: we can grab drinks some other time though!
+-
+i: well next time it's probably only going to be me and you, but alright
+-
+m: I better go home for now, see you and have fun drinking with your friends!
+-
+i: I definitely will! See you tomorrow!

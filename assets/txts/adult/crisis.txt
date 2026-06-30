@@ -1,0 +1,13 @@
+s: ..the papers?
+-
+m: ...
+-
+s: I don't know what happened in there, but you have to do better if you want to keep this job
+-
+s: I'm not going to fire you for this, but your salary's reduced if you keep this up..
+-
+s: for now i think you should take a break before I give you some more work
+-
+i: hey, let's go grab a smoke
+-
+m: sure
