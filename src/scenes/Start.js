@@ -88,7 +88,7 @@ choice2.on('pointerdown', () => {
     // if (colorgatherer.choices.includes("red")){
     //     console.log("HOE");
     // }
-    this.scene.start('defaultnone'); //firstscene
+    this.scene.start('abouthegame'); //firstscene
     choice2.setStyle({ color: "#ffffff" });
 });
 // have something happen when choice is picked (diff picture/scene/if case/whatever)
