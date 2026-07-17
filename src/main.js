@@ -1,4 +1,5 @@
 import { Start } from './scenes/Start.js';
+import { abouthegame } from './scenes/abouthegame.js';
 import { defaultnone } from './scenes/defaultnone.js';
 import { firstscene } from './scenes/firstscene.js';
 import { kidscene1 } from './scenes/kidscene1.js';
@@ -40,7 +41,7 @@ const config = {
     backgroundColor: '#000000',
     pixelArt: false,
     scene: [
-        Start,defaultnone,firstscene,pickinitcolors,
+        Start,defaultnone,firstscene,pickinitcolors,abouthegame,
         kidscene1,playground,kidscene2,colorgatherer,
         young1,schoolinit,gang,yellowcyan,playground2,classroom,young2,
         adult1,adult2,work1,work2balcony,adultout1,
